@@ -1,0 +1,36 @@
+
+# Playwright stuff
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+bin/
+Bin/
+obj/
+Obj/
+
+# Tempory folders
+/tmp/
+
+# Project folders
+test-results/
+playwright-report/
+playwright/.cache/
+results/
+
+# environment vars
+.env
+.auth/**
+
+# all log filesc
+*.log
+node_modules
