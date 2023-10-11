@@ -4,7 +4,7 @@ services:
 
   wordpress:
     container_name: sv_wordpress
-    image: wordpress:latest
+    image: wordpress:6.3.1
     restart: always
     ports:
       - 8080:80
@@ -27,7 +27,7 @@ services:
       MYSQL_USER: auser
       MYSQL_PASSWORD: apass
       # MYSQL_RANDOM_ROOT_PASSWORD: '1'
-      
+
     volumes:
       - db:/var/lib/mysql
 
