@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "ms-playwright.playwright",
+        "ryanrosello-og.playwright-vscode-trace-viewer",
+        "dbaeumer.vscode-eslint"
+    ]
+}

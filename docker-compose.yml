@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    container_name: sv_wordpress
+    image: wordpress:latest
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: auser
+      WORDPRESS_DB_PASSWORD: apass
+      WORDPRESS_DB_NAME: svdb
+    volumes:
+      - wordpress:/var/www/html
+
+  db:
+    container_name: sv_mysql
+    command: --default-authentication-plugin=mysql_native_password
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: svdb
+      MYSQL_USER: auser
+      MYSQL_PASSWORD: apass
+      # MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  wordpress:
+  db:

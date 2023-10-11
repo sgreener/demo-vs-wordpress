@@ -1,0 +1,33 @@
+{
+  "name": "example-playwright-tests",
+  "version": "0.0.1",
+  "description": "demonstration of playwright",
+  "scripts": {
+    "pw:install": "npx playwright install",
+    "pw:trace": "npx playwright show-trace",
+    "win:results:delete": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command Remove-Item .\\results\\* -Recurse -Force"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.38.1",
+    "@tsconfig/node16": "^16.1.1",
+    "@types/node": "^20.8.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-playwright": "^0.16.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sonarjs": "^0.21.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

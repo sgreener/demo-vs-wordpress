@@ -1,0 +1,10 @@
+playwright-report
+test-results
+node_modules
+.vscode
+.env
+build
+**/*.js
+**/*.json
+**/*.md
+.*

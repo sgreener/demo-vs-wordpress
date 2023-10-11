@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug current test file (chromium)",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "HEADLESS": "false" // override the one in .env so we can see the tests run
+            },
+            "sourceMaps": true,
+            "console": "integratedTerminal",
+
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "playwright",
+                "test",
+                "${fileBasename}",
+                "--workers=1",
+                "--project=chromium"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "autoAttachChildProcesses": true,
+            "killBehavior": "polite",
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "Debug hardcoded test in test file (chromium)",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "HEADLESS": "false"
+            },
+            "sourceMaps": true,
+            "console": "integratedTerminal",
+
+
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "playwright",
+                "test",
+                // file + test of file
+
+                "tests/login.spec.ts", "-g", "Can login with valid credentials",
+
+                // ----
+                "--workers=1",
+                "--project=chromium",
+                "--headed"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "autoAttachChildProcesses": true,
+            "killBehavior": "polite",
+        }
+    ]
+}

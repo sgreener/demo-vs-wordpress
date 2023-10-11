@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "npx playwright install",
+			"type": "shell",
+			"command": "npx playwright install",
+			"problemMatcher": []
+		},
+		{
+			"label": "clean results folder",
+			"detail": "remove all files from the results folder (clean the folder)",
+			"type": "shell",
+			"command": "Remove-Item .\\results\\* -Recurse -Force",
+			"problemMatcher": []
+		}
+	]
+}

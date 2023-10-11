@@ -1,0 +1,19 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "cSpell.words": [
+        "BEAMER",
+        "codepaths",
+        "consts",
+        "domcontentloaded",
+        "msedge",
+        "normalised",
+        "sonarjs",
+        "tsbuildinfo",
+        "unroute",
+        "viewports",
+        "waitfor"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
